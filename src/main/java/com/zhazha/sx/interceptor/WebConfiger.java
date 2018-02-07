@@ -25,7 +25,7 @@ public class WebConfiger extends WebMvcConfigurerAdapter implements ApplicationC
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("/static/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/static/");
-        registry.addResourceHandler("/templates/page/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/templates/page/");
+//        registry.addResourceHandler("/templates/page/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/templates/page/");
         super.addResourceHandlers(registry);
     }
 
@@ -36,7 +36,8 @@ public class WebConfiger extends WebMvcConfigurerAdapter implements ApplicationC
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //拦截规则：除了login，其他都拦截判断
-        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/welcome").excludePathPatterns("/login").excludePathPatterns("/static/**");
+//        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/welcome").excludePathPatterns("/login").excludePathPatterns("/static/**");
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/index").addPathPatterns("/movie");
         super.addInterceptors(registry);
     }
 
