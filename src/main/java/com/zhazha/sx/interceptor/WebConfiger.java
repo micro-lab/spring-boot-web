@@ -26,7 +26,6 @@ public class WebConfiger extends WebMvcConfigurerAdapter implements ApplicationC
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("/static/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/static/");
         registry.addResourceHandler("/templates/page/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/templates/page/");
-
         super.addResourceHandlers(registry);
     }
 
