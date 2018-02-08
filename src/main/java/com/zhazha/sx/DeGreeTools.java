@@ -8,7 +8,13 @@ public class DeGreeTools {
         System.out.println(getRange(89.877666, 81.167646, 91.579416, 81.132152));
     }
 
-    // 先经度，后维度
+    /**
+     * @param L1 第一个位置的经度
+     * @param R1 第一个位置的纬度
+     * @param L2 第二个位置的经度
+     * @param R2 第二个位置的纬度
+     * @return 两个位置间的距离(单位:m)
+     */
     public static double getRange(double L1, double R1, double L2, double R2) {
         double l1 = degreeToRad(_getLoop(L1, -180, 180));
         double r1 = degreeToRad(_getRange(R1, -74, 74));
