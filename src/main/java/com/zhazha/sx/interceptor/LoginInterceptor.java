@@ -14,12 +14,11 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        logger.info("------preHandle------");
         //获取session
         User user = (User)httpServletRequest.getSession().getAttribute("user");
         //判断用户ID是否存在，不存在就跳转到登录界面
         if(user == null){
-            logger.info("------:跳转到login页面！");
+            logger.info("------:跳转到欢迎页面！");
             httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/welcome");
             return false;
         }else{
