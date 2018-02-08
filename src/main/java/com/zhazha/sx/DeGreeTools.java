@@ -1,15 +1,15 @@
 package com.zhazha.sx;
 
-public class Tests {
+public class DeGreeTools {
     private static double EARTH_RADIUS = 6370996.81;//地球半径
 
     public static void main(String[] args) {
         // 先经度，后维度
-        System.out.println(ceshi(89.877666, 81.167646, 91.579416, 81.132152));
+        System.out.println(getRange(89.877666, 81.167646, 91.579416, 81.132152));
     }
 
     // 先经度，后维度
-    public static double ceshi(double L1, double R1, double L2, double R2) {
+    public static double getRange(double L1, double R1, double L2, double R2) {
         double l1 = degreeToRad(_getLoop(L1, -180, 180));
         double r1 = degreeToRad(_getRange(R1, -74, 74));
         double l2 = degreeToRad(_getLoop(L2, -180, 180));
