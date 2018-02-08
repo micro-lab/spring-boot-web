@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 /**
  * Created by sang on 16-12-20.
  */
+
 @Configuration
 //@EnableWebMvc//无需使用该注解，否则会覆盖掉SpringBoot的默认配置值
 public class WebMVCConfig extends WebMvcConfigurerAdapter {
