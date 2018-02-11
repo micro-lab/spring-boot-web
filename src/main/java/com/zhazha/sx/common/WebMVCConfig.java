@@ -1,4 +1,4 @@
-package com.zhazha.sx;
+package com.zhazha.sx.common;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

@@ -108,7 +108,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="movie" class="">
+                      <a href="showAllMovie" class="">
                           <i class="icon_table"></i>
                           <span>电影详情</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
@@ -124,6 +124,12 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
+              <div class="form-group">
+                  <label class="control-label col-sm-2">根据您的爱好搜索 </label>
+                  <div class="col-sm-6">
+                      <input id="cp1" type="text" value="28-10-2013" size="16" class="form-control"/>
+                  </div>
+              </div>
               <div class="row">
                   <div class="col-lg-12">
                       <section class="panel">
@@ -146,7 +152,7 @@
                                       <th th:text="${movie.MainPerformerName}"/>
                                       <th th:text="${#dates.format(movie.releaseTime,'yyyy-MM-dd')}"/>
                                       <th th:text="${movie.hasMosaic}"/>
-                                      <th ><a href="#" th:text="点击下载"/></th> <!--${movie.torrentFile}-->
+                                      <th ><a th:href="${movie.torrent}" th:text="点击下载1"/></th>
                                   </tr>
                               </div>
                            </tbody>

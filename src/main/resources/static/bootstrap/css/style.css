@@ -263,7 +263,7 @@ table tr th { color: #688a7e;}
     width: 180px;
     height: 100%;
     position: fixed;
-    background: #394a59;
+    background: #34a5dc;
 }
 
 .nav-collapse.collapse {
@@ -363,7 +363,7 @@ ul.sidebar-menu li a{
     top: 2px;
 }*/
 ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #2e3b46;
+    background: #34a5dc;
     color: #fff;
     display: block;
     /*border-radius: 4px;
@@ -1044,7 +1044,7 @@ div[data-role="editor-toolbar"] {
 .dark-bg {
   color : #fff;
   background : #1a2732;
-  background-color : #1a2732;
+  background-color : #34a5dc;
 }
 .facebook-bg {
   color: #fff;

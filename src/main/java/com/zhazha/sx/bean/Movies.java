@@ -9,7 +9,7 @@ public class Movies {
     private String MainPerformerName;
     private String hasMosaic;
     private Date releaseTime;
-    private String torrentFile;
+    private String torrent;
 
     public int getId() {
         return id;
@@ -59,11 +59,11 @@ public class Movies {
         this.releaseTime = releaseTime;
     }
 
-    public String getTorrentFile() {
-        return torrentFile;
+    public String getTorrent() {
+        return torrent;
     }
 
-    public void setTorrentFile(String torrentFile) {
-        this.torrentFile = torrentFile;
+    public void setTorrent(String torrent) {
+        this.torrent = torrent;
     }
 }
