@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class IndexAndLoginController {
-    Logger logger = LoggerFactory.getLogger(IndexAndLoginController.class);
+public class LoginController {
+    Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @RequestMapping("/")
     public String root(Model model) {
