@@ -20,6 +20,11 @@ public class LoginController {
         return "page/login";
     }
 
+    @RequestMapping("/welcome")
+    public String welcome(Model model) {
+        return "page/login";
+    }
+
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(HttpServletRequest request, @ModelAttribute User user, Model model) {
