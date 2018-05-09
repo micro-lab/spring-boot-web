@@ -1,7 +1,6 @@
 package com.zhazha.sx.dao;
 
 import com.zhazha.sx.bean.Movies;
-import com.zhazha.sx.bean.TestBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
