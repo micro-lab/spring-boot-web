@@ -34,11 +34,6 @@ public class LoginController {
         return "page/login";
     }
 
-    @RequestMapping("/index")
-    public String index2(HttpServletRequest request, Model model) {
-        User user = (User) request.getSession().getAttribute("user");
-        model.addAttribute("user", user);
-        return "page/index";
-    }
+
 
 }
