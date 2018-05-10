@@ -2,7 +2,7 @@ package com.zhazha.sx.bean;
 
 import java.util.Date;
 
-public class Movies {
+public class Movie {
     private int id;
     private String name;
     private int PerformerId;

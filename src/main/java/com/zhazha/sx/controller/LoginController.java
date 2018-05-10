@@ -32,7 +32,7 @@ public class LoginController {
             logger.info("登陆成功!");
             request.getSession().setAttribute("user", user);
 
-            return "page/index";
+            return "page/movies";
 
         }
         logger.info("登陆失败!");

@@ -1,6 +1,6 @@
 package com.zhazha.sx.dao;
 
-import com.zhazha.sx.bean.Movies;
+import com.zhazha.sx.bean.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,19 +14,19 @@ public class MovieDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public List<Movies> getMovies() {
+    public List<Movie> getMovies() {
         return getMovies(1,20);
     }
 
-    public List<Movies> getMovies(int pageNum, int rowNum) {
+    public List<Movie> getMovies(int pageNum, int rowNum) {
         String sql = "SELECT id,name,PerformerId,MainPerformerName,hasMosaic,releaseTime,torrent FROM movie limit ?,?";
-        return jdbcTemplate.query(sql, new Object[]{}, new BeanPropertyRowMapper<Movies>(Movies.class));
+        return jdbcTemplate.query(sql, new Object[]{pageNum,rowNum}, new BeanPropertyRowMapper<Movie>(Movie.class));
 
     }
 
-    public List<Movies> selectMovies(int pageNum, int rowNum) {
+    public List<Movie> selectMovies(int pageNum, int rowNum) {
         String sql = "SELECT id,name,PerformerId,MainPerformerName,hasMosaic,releaseTime,torrent FROM movie limit ?,?";
-        return jdbcTemplate.query(sql, new Object[]{}, new BeanPropertyRowMapper<Movies>(Movies.class));
+        return jdbcTemplate.query(sql, new Object[]{}, new BeanPropertyRowMapper<Movie>(Movie.class));
 
     }
 
