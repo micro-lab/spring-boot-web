@@ -18,7 +18,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-   
+
 
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
