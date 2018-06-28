@@ -1,0 +1,29 @@
+<html>
+<script th:src="@{bootstrap/js/jquery.js}"></script>
+<script th:src="@{bootstrap/js/jquery-3.3.1.js}"></script>
+<script th:src="@{bootstrap/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript">
+    function init() {
+        var data = {name:"ls"};
+        // $.ajax({
+        //     type: 'POST',
+        //     contentType: 'application/json',
+        //     url: "/test",
+        //     processData: false,
+        //     dataType: 'json',
+        //     data: data,
+        //     success: function (dataSet) {
+        //         alert(dataSet.gf);
+        //     },
+        //     error: function () {
+        //         alert('Sorry, it is wrong!');
+        //     }
+        // });
+        $.post("/test", { name: "John", time: "2pm","nn":{"ff":"s","xs":"s"},"xx":["A","B","C"] },
+            function(data){
+                alert("Data Loaded: " + data);
+            });
+    };
+</script>
+<button onclick="init()">Post </button>
+</html>
