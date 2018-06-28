@@ -31,12 +31,14 @@ public class LoginController {
         if (user.getName().equals("zs") && user.getPassword().equals("zs")) {
             logger.info("登陆成功!");
             request.getSession().setAttribute("user", user);
-
+//            return "page/fork";
             return "page/movies";
 
         }
         logger.info("登陆失败!");
-        return "page/login";
+
+        return "page/index";
+
     }
 
 
